@@ -1,0 +1,84 @@
+Steps of installation for Ubuntu.
+
+1) Collect the bootable pendrive from Michael, Insert the bootable Flash drive.
+
+2) When the system is starting .Press F9 , to choose the boot device.
+
+3) Choose SMI USB DISK 1000 as the boot device.
+
+4)Ubuntu installation begins.
+
+5) Choose “Install Ubuntu” in the first displayed menu.
+
+6) Choose your preferred language (By default it is English US).
+
+7) Following options are displayed.
+
+     a)  Normal Installation
+     b)  Minimal Installation
+     c)  Download updates while installing Ubuntu (This is selected by default)
+     d)  Install third-party software for graphics.
+
+
+Choose the first option from above.
+
+6) In the next screen choose any of these options.
+
+     a) Erase disk and install ubuntu (This will install Ubuntu and erase all the contents on the disk . Without partition).
+
+    b)  Install Ubuntu and Windows Bootloader (This is will help in dual boot of windows and ubuntu) . This option was never seen in my installation.
+
+c)  Something else , (This option is used to install ubuntu with partitions) .
+            
+         Choose first partition as Primary Partition ( 32 GB or more ) . This is the root node . It is mounted as  ‘/’. This where the OS will boot from . All system files will be stored here.
+
+         Choose swap area as the next partition around 8 GB  or more, This space can be utilised later.
+
+         You can create another partition with rest of the free space , this is like a regular partitioned drive.  Max 4 partitions are allowed.
+
+
+7)   Install gparted to create partitions later.
+
+            sudo apt install  gparted
+
+
+8)   Choose timezone as kolkata in the next step.
+
+9)   In the next screen enter your Name, computer’s Name , Username , Password.
+
+10) installation of Ubuntu begins.
+
+11) Choose restart now , the system will restart. Ubuntu is installed. 
+
+12)  Python3 should be installed by default . If it is not installed
+
+        use  sudo apt-get update
+                
+         Install Python 3.6 using
+
+          sudo apt install python3.6
+
+13) Install pip using .
+              Sudo apt install python3-pip 
+
+14) For installing git
+
+             sudo apt install git
+
+15) Check out all the projects using git clone.
+
+16) Install tensorflow and CalamariOCR using
+
+           pip3 install tensorflow
+
+           pip3 install calamari_ocr
+
+
+          
+
+
+
+
+ 		
+
+
