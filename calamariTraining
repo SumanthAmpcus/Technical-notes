@@ -1,0 +1,101 @@
+Calamari Training 
+
+
+ Prerequisites:
+
+ 1)  Install calamari_ocr  , using pip3 install  calamari_ocr
+
+ 2)  Prerequisite is to have the ground  truth file in the format     .gt.txt  , the ground truth file   contains the actual information in the file. This groundtruth file is present in the same directory as the train image files.
+
+ 
+ Start Training:
+
+1)  calamari-train --files your_images.*.png
+
+The above command starts training on the images , it generates all the checkpoint files. 
+
+Checkpoint file is the output of the training , certain progress of teh training is recorded on these checkpoints.
+
+ Eg:
+
+Storing checkpoint to '/home/sumanth/Downloads/klk/train/model_00000003.ckpt'
+
+
+We can pass any previous checkpoints using –weights parameter.
+
+Eg:
+
+calamari-train –weights /home/sumanth/Documents/github/calamari_models/antiqua_modern/4.ckpt  --files *.png
+
+
+The saved checkpoint is basically a combination of 4 files.
+
+1) <model_name>.ckpt.meta
+
+2)  <model_name>.ckpt.json
+
+3) <model_name>.ckpt.index
+
+4) <model_name>.ckpt.data
+
+
+The last checkpoint during a training is passed to the prediction for best outcome .
+
+calamari-predict --checkpoint path_to_model.ckpt --files your_images.*.png
+
+Similarly a checkpoint can be used on a completely different dataset as well.
+
+The following predictions are done on a single straight line text.
+
+Image :
+
+
+
+prediction : 
+
+       
+A mathematical model for the hysteresis
+
+
+Image:
+
+
+
+Prediction: 
+
+process. The physical problem of the response of a specimen to applied loads
+
+
+Image:
+
+
+
+Prediction:
+
+n a polycrystalline specimen the umps of deformation are smoothed out,
+
+
+Image :
+
+
+Prediction:
+
+outperformed both Tesseract and OCRopy. CfR in the table stands for character error rate
+
+
+Image:
+
+
+
+Prediction:
+
+with improvements been made to the model every day. High user base which implied higher support if
+
+
+Image:
+
+
+
+Prediction:
+
+Calamari is modularited in such a way that new methods can be easily written and old methods can
