@@ -38,12 +38,22 @@ The saved checkpoint is basically a combination of 4 files.
 
 4) <model_name>.ckpt.data
 
+We can even run the program train.py inside the calamari_ocr code base , this file is in calamari_ocr/scripts folder. Train.py is the file , to which you can pass the arguments as mentioned above.
+
+For Example :
+
+python3 train.py --weights  <CheckPointFileLocation>.ckpt  --files  <training-folder Location>/*.png
+
 
 The last checkpoint during a training is passed to the prediction for best outcome .
 
 calamari-predict --checkpoint path_to_model.ckpt --files your_images.*.png
 
 Similarly a checkpoint can be used on a completely different dataset as well.
+
+Example:
+
+python3 predict.py --checkpoint <checkpoint-name>.ckpt  --files  <image file location>/*.png
 
 The following predictions are done on a single straight line text.
 
