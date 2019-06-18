@@ -5,9 +5,9 @@ Calamari Training
 
  1)  Install calamari_ocr  , using pip3 install  calamari_ocr
 
- 2)  Prerequisite is to have the ground  truth file in the format     .gt.txt  , the ground truth file   contains the actual information in the file. This groundtruth file is present in the same directory as the train image files.
+ 2)  Prerequisite is to have the ground  truth file in the format     .gt.txt  , the ground truth file contains the actual 
+ information in the file. This groundtruth file is present in the same directory as the train image files.
 
- 
  Start Training:
 
 1)  calamari-train --files your_images.*.png
@@ -110,4 +110,4 @@ https://imgur.com/4eHa5RZ
 
 Prediction:
 
-Calamari is modularited in such a way that new methods can be easily written and old methods can
+Calamari is modularised in such a way that new methods can be easily written and old methods can
